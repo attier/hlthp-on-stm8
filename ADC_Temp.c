@@ -11,8 +11,6 @@
 
 #include "ADC_Temp.h"
 
-//#include "stm8s_adc1.h"
-//#include "tempc.c"
 #define ADC_DIGITAL_MAX  1023    //2^10 - 1
 #define ADC_VDD_X100     500    //5V * 100
 #define ADC_MAX_BRI_VOLTS    500     //3.2V * 100
@@ -271,37 +269,14 @@ void ADC_Task(int temp)
     
     ADC1_ClearFlag(ADC1_FLAG_EOC);
      if(temp==1)
-       {long temmmp;
-     temmmp=uwAdcSample;
+       {long temp1;
+     temp1=uwAdcSample;
      
      uwAdcSample=(temmmp*10230/(9*temmmp+1023));
        T[temp]=fkTempTab[(int)(uwAdcSample/4-20)];
      }
    else
      T[temp]=fkTempTab[(int)(uwAdcSample/4-20)]; //load volt temp
-    //Convert it to voltage * 100
-    ADC_Brightness = (uint16_t)((uint32_t)uwAdcSample * (uint32_t)ADC_VDD_X100 / (uint32_t)ADC_DIGITAL_MAX);
-   /* 
-    if(ADC_Brightness < ADC_MIN_BRI_VOLTS)
-    {
-        ADC_Brightness = ADC_MIN_BRI_VOLTS;
-    }   
     
-    if(ADC_Brightness > ADC_MAX_BRI_VOLTS)
-    {
-        ADC_Brightness = ADC_MAX_BRI_VOLTS;
-		
-    }
-    
-	
-    //Convert it to brightness
-    ADC_Brightness = (ADC_Brightness * 100 ) / (ADC_MAX_BRI_VOLTS - ADC_MIN_BRI_VOLTS);
-    
-    if(ADC_Brightness > 100)
-    {
-        ADC_Brightness = 100;
-    }
-    
-    ADC_Brightness = 100 - ADC_Brightness;
-  */
+   
 }

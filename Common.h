@@ -1,17 +1,16 @@
 /*
 Copyright (c),2015,**Co.,Ltd.
 FileName:common file
-Author:MR.Paradox
-Data:2015.2.4
+Author:
+Data:2015
 Version:V1.0
-Description:使程序通用于其他MCU
-Function:初始化
+Description:使????????MCU
+Function:??始??
 History:
 */
 #ifndef _COMMON_H_
 #define _COMMON_H_
-//#include "ioS3c9488.h"
-//#include "intrinsics.h"
+
 #define ON 1
 #define OFF 0
 #define TURE 1
@@ -21,10 +20,7 @@ History:
 #define NOP  (__no_operation())
 #define DI  (__disable_interrupt())
 #define EI (__enable_interrupt())
-//#define GET_BIT(Var,BITn) (Var&(1<<BITn))
-//#define COM_BIT(Var,BITn) (Var^=(1<<BITn))
-//#define SET_BIT(Var,BITn) (Var|=(1<<BITn))
-//#define CLR_BIT(Var,BITn) (Var&=~(1<<BITn))
+
 enum {NoWork,WorkHW,WorkH,WorkC};
  union JudgeFlag{
       struct {
@@ -55,18 +51,18 @@ union ErrFlag{
       uchar E7:1;
       uchar E6:1;
       uchar E5:1;
-      uchar E4:1;//三次保护
+      uchar E4:1;//??伪???
       uchar E3:1;
       uchar E2:1;
       uchar E1:1;
-      uchar E0:1;//通信故障
-      uchar P7:1;//低压保护
-      uchar P6:1;//高压保护
-      uchar P5:1;//防冻结
-      uchar P4:1;//排气过高
+      uchar E0:1;//通????
+      uchar P7:1;//???????
+      uchar P6:1;//???????
+      uchar P5:1;//??????
+      uchar P4:1;//??????
       uchar P3:1;
-      uchar P2:1;//二级防冻
-      uchar P1:1;//一级防冻
+      uchar P2:1;//????????
+      uchar P1:1;//一??????
       uchar P0:1;
              };uint All;
             };
@@ -135,7 +131,7 @@ union SWFlag{
             };
 extern union SWFlag SW;
 enum {E,CP,UP,W,XIX,XUX,XCX,CS};
-//环温，排气，翅片（盘管），水箱，XX,XX,XX,回气（出水）         
-extern int T[8];  //RoomTemp和PipeTime的检测
+//????????????????埽???水???XX,XX,XX,???????水??         
+extern int T[8];  //RoomTemp??ipeTime?募?
 
 #endif

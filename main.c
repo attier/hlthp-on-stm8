@@ -77,8 +77,8 @@ int main( void )
 				ADC_Task(i);
 			}
     
-     InitAdc1HW(8);
-  ADC_Task(7);
+    InitAdc1HW(8);
+    ADC_Task(7);
   }
   
  

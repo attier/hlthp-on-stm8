@@ -1,8 +1,5 @@
 #include "HPSystem.h"
-//#include "HPProtect.h"
-//#include "HPNeed.h"
-//#include "HPInUnit.h"
-//#include "HPOuUnit.h"
+
 
 
 void HPstart(void)
@@ -135,9 +132,7 @@ void HPShut(void)
 
 void HPSystem(void)
 {
-    // HPProtect();
-    // HPNeed()£»
-    // HPInUnit();
+    
      HPstart();
      HPOuUnit();
      
