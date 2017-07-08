@@ -9,7 +9,7 @@ IO_TypeDef o_LED1={GPIOA,GPIO_PIN_5};
 IO_TypeDef o_LED2={GPIOA,GPIO_PIN_4};
 IO_TypeDef o_LED3={GPIOA,GPIO_PIN_3};
 
-//´íµÄÀëÆ×
+//ä¿æŠ¤ä¸Žå¼€å…³
 IO_TypeDef i_HiP={GPIOB,GPIO_PIN_3}; 
 IO_TypeDef i_LoP={GPIOD,GPIO_PIN_7}; 
 IO_TypeDef i_S  ={GPIOD,GPIO_PIN_7}; 

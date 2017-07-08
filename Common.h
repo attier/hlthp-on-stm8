@@ -1,11 +1,10 @@
 /*
-Copyright (c),2015,**Co.,Ltd.
 FileName:common file
 Author:
 Data:2015
 Version:V1.0
-Description:ʹ????????MCU
-Function:??ʼ??
+Description:
+Function:
 History:
 */
 #ifndef _COMMON_H_

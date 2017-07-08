@@ -1,2 +1,2 @@
 # hlthp-on-stm8
-HeatPump controller for stm8s005
+HeatPump controller with stm8s005

@@ -4,34 +4,6 @@ uchar InterTimes=61;
 uchar Clock   = 60;
 uchar Minutes = 20;
 extern union JudgeFlag Judge;
-/*******************
-union TimeCount{
-      struct {
-      // CountClk 
-      uchar EVWRun:8;//150
-      uchar EVHRun:8;//150
-      uchar EVCRun:8;//150
-      uchar PumpRun:5;//30
-      uint  PumpStop:9;//360
-      uchar ComRun:7;//120
-      uchar ComStop:8;//180
-      uchar WtOff:4;//10
-      uchar HpOff:4;//10
-      uchar DefogStop:4;//30
-      uint  Defoging:16;//4800
-      // CountMin          
-      uchar HWRun:6;//40
-      uchar HRun:6;//40
-      uchar CRun:6;//40
-      uchar E7:5;//30
-      uchar E6:5;//30
-      uchar E5:5;//30
-      uchar DefogScan:6;//40
-      uchar HTScan:4;//15
-             };uchar All;
-            };
-extern union TimeCount TM;
-*******************/
 void CountClk(void)
 {
      if (0<TM.EVHRun<150)   {TM.EVHRun++;}

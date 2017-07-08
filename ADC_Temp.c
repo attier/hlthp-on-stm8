@@ -251,10 +251,9 @@
 131,
 };
 
-//int T[8]; //temp volt 
+
 extern int T[8];
  
-uint16_t ADC_Brightness = 0;
 
 void ADC_Task(int temp)
 {
